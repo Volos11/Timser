@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Timser</string>
+    <string name="errortitle">Тут чего-то не хватает</string>
+    <string name="save">Успешно сохранено</string>
+    <string name="Title">Заголовок</string>
+    <string name="Discrip">Описание</string>
+</resources>

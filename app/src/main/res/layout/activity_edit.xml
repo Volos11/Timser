@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".EditActivity"
+    android:orientation="vertical"
+    android:weightSum="20"
+    android:background="@color/black">
+
+    <EditText
+        android:id="@+id/edTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20sp"
+        android:layout_marginTop="20sp"
+        android:layout_marginRight="20sp"
+        android:layout_weight="1"
+        android:background="@color/white"
+        android:ems="10"
+        android:hint="@string/Title"
+
+        android:inputType="textPersonName"
+        android:textColor="@color/greey"
+        android:textSize="30sp" />
+
+    <EditText
+        android:id="@+id/edDisc"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20sp"
+        android:layout_marginTop="30sp"
+        android:layout_marginRight="20sp"
+        android:layout_marginBottom="30sp"
+        android:layout_weight="17"
+        android:background="@color/white"
+
+        android:ems="10"
+        android:gravity="start"
+        android:hint="@string/Discrip"
+        android:inputType="textMultiLine|textPersonName"
+        android:maxLines="100"
+        android:textColor="@color/greey"
+        android:textSize="25sp" />
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:orientation="horizontal"
+        android:weightSum="7">
+
+        <Button
+            android:id="@+id/button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="160sp"
+            android:layout_marginBottom="30sp"
+            android:layout_weight="1"
+            android:backgroundTint="@color/green"
+
+            android:onClick="Save"
+            android:text="Save" />
+    </LinearLayout>
+</LinearLayout>

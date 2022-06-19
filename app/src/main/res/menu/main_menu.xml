@@ -1,9 +1,27 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto">
-    <item android:title="SearchView"
+    <item
         android:id="@+id/id_search"
         android:icon="@drawable/ic_baseline_search_24"
-        app:showAsAction="ifRoom"
-        app:actionViewClass="android.widget.SearchView"/>
+        android:title="SearchView"
+        app:actionViewClass="android.widget.SearchView"
+        app:showAsAction="ifRoom" />
+    <item
+        android:id="@+id/WhiteMenu"
+        android:orderInCategory="100"
+        android:title="Белый"
+        app:showAsAction="never"
+
+        ></item>
+    <item
+        android:id="@+id/blackMenu"
+        android:orderInCategory="100"
+        android:title="Черный"
+        app:showAsAction="never"></item>
+    <item
+        android:id="@+id/StokeMenu"
+        android:orderInCategory="100"
+        android:title="Стандартный"
+        app:showAsAction="never"></item>
 </menu>

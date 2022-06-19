@@ -10,10 +10,16 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Timser">
         <activity android:name=".EditActivity" android:theme="@style/Theme.Edit">
-
         </activity>
+
+        <activity android:name=".EditActivityWork" android:theme="@style/Theme.Edit">
+        </activity>
+        <activity android:name=".Parametrs" android:theme="@style/Theme.Edit">
+        </activity>
+
         <activity android:name=".MainActivity">
             <intent-filter>
+
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />

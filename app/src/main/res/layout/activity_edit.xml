@@ -1,67 +1,176 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/Back"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".EditActivity"
+    android:background="@drawable/fonge"
     android:orientation="vertical"
     android:weightSum="20"
-    android:background="@color/black">
+    tools:context=".EditActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/imContainer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        app:layout_constraintBottom_toTopOf="@+id/guideline3"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0">
+
+        <ImageView
+            android:id="@+id/imageNew"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="7dp"
+            android:layout_marginRight="20dp"
+            android:layout_weight="1"
+            android:background="@android:drawable/editbox_background"
+            android:onClick="onClickChooseImage"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.444"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+
+            app:layout_constraintVertical_bias="0.483"
+            app:srcCompat="@drawable/ic_baseline_delete_24" />
+
+
+        <ImageButton
+            android:id="@+id/imDel"
+            android:layout_width="57dp"
+            android:layout_height="51dp"
+            android:layout_marginTop="51dp"
+            android:layout_marginBottom="50dp"
+            android:onClick="onClickDeleteImage"
+            app:layout_constraintBottom_toBottomOf="@+id/imageNew"
+            app:layout_constraintEnd_toEndOf="@+id/imageNew"
+            app:layout_constraintHorizontal_bias="0.088"
+            app:layout_constraintStart_toStartOf="@+id/imageNew"
+            app:layout_constraintTop_toTopOf="@+id/imageNew"
+            app:layout_constraintVertical_bias="1.0"
+            app:srcCompat="@drawable/ic_baseline_delete_24" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
     <EditText
         android:id="@+id/edTitle"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="20sp"
-        android:layout_marginTop="20sp"
-        android:layout_marginRight="20sp"
+        android:layout_width="361dp"
+        android:layout_height="56dp"
+        android:layout_marginTop="19dp"
         android:layout_weight="1"
-        android:background="@color/white"
+        android:background="@drawable/edwhiter"
         android:ems="10"
+        android:fontFamily="serif-monospace"
         android:hint="@string/Title"
-
         android:inputType="textPersonName"
-        android:textColor="@color/greey"
-        android:textSize="30sp" />
+        android:shadowColor="@color/teal_200"
+        android:shadowDx="2"
+        android:shadowDy="2"
+        android:shadowRadius="3"
+        android:textColor="@color/black"
+        android:textSize="30sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imContainer" />
 
     <EditText
         android:id="@+id/edDisc"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="20sp"
-        android:layout_marginTop="30sp"
-        android:layout_marginRight="20sp"
-        android:layout_marginBottom="30sp"
-        android:layout_weight="17"
-        android:background="@color/white"
-
+        android:layout_width="360dp"
+        android:layout_height="543dp"
+        android:background="@drawable/edwhiter"
         android:ems="10"
+        android:fontFamily="sans-serif"
         android:gravity="start"
         android:hint="@string/Discrip"
         android:inputType="textMultiLine|textPersonName"
         android:maxLines="100"
-        android:textColor="@color/greey"
-        android:textSize="25sp" />
+        android:shadowColor="@color/teal_200"
+        android:shadowDx="1"
+        android:shadowDy="1"
+        android:shadowRadius="1"
+        android:textColor="@color/black"
+        android:textSize="25sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.489"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/edTitle" />
 
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.25171" />
 
     <LinearLayout
+        android:id="@+id/linearLayout"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_weight="1"
-        android:orientation="horizontal"
-        android:weightSum="7">
+        android:layout_height="match_parent"
+        android:gravity="bottom"
+        android:orientation="vertical"
+        android:visibility="visible"
+        android:weightSum="10">
 
-        <Button
-            android:id="@+id/button"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="160sp"
-            android:layout_marginBottom="30sp"
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+
+
             android:layout_weight="1"
-            android:backgroundTint="@color/green"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:weightSum="10">
 
-            android:onClick="Save"
-            android:text="Save" />
+            <Button
+                android:id="@+id/Saved"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="50dp"
+                android:layout_weight="8"
+                android:backgroundTint="@color/teal_200"
+                android:fontFamily="@font/harpseal"
+                android:onClick="Save"
+                android:text="Сохранить"
+                android:textColor="@color/black" />
+
+            <com.google.android.material.floatingactionbutton.FloatingActionButton
+                android:id="@+id/fbAddIm"
+                android:layout_width="58dp"
+                android:layout_height="56dp"
+
+                android:layout_marginRight="5pt"
+                android:layout_weight="2"
+                android:clickable="true"
+
+                android:onClick="onClickAddImage"
+                app:srcCompat="@drawable/ic_baseline_image_24" />
+
+        </LinearLayout>
     </LinearLayout>
-</LinearLayout>
+
+    <TextView
+        android:id="@+id/Date"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        android:text="Новая запись"
+        android:textSize="14dp"
+        android:fontFamily="@font/harpseal"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toTopOf="@+id/edDisc"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.057"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/edTitle"
+        tools:visibility="visible" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

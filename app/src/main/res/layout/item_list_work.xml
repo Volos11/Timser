@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center"
+    android:orientation="horizontal"
+    android:paddingLeft="14dp"
+    android:paddingRight="14dp"
+    android:weightSum="1">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:weightSum="10"
+        android:orientation="vertical">
+
+        <EditText
+            android:id="@+id/tvTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:minHeight="70dp"
+            android:paddingLeft="12dp"
+            android:textSize="30sp"
+            android:layout_gravity="center"
+            tools:text="Ttitles" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:weightSum="12"
+            android:orientation="horizontal">
+
+            <EditText
+                android:id="@+id/tvDisc"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="9"
+                android:inputType="textMultiLine|textPersonName"
+                android:minHeight="70dp"
+                android:paddingLeft="12dp"
+                android:textSize="30sp"
+                tools:text="for text work" />
+
+            <CheckBox
+                android:layout_width="23dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center|center_vertical"
+                android:layout_weight="1" />
+
+            <ImageView
+                android:id="@+id/deleted"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center|end"
+                android:layout_weight="1"
+                app:srcCompat="@android:drawable/btn_dialog" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+</LinearLayout>
